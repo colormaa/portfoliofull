@@ -1,3 +1,4 @@
 /api/node_modules
 /client/node_modules
 /worker/node_modules
+/clientadmin/node_modules
