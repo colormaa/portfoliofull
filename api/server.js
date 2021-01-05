@@ -4,10 +4,10 @@ var bodyParser = require('body-parser')
 var app = express();
 app.use(cors())
 app.use(bodyParser.json())
-app.get('/', function(req, res){
+app.get('/api', function(req, res){
     return res.json({message:"hi there"})
 });
-app.post('/', (req, res)=>{
+app.post('/api', (req, res)=>{
     return res.json({message:"post", body: req.body})
 })
 var port = process.env.port||8000;
