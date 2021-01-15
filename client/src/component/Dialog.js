@@ -10,6 +10,9 @@ const useStyles = makeStyles(theme=>({
     },
     cardContainer:{
         width:"100%"
+    },
+    description:{
+        marginTop:30
     }
 }))
 const DialogCustom = (props) => {
@@ -19,6 +22,10 @@ const DialogCustom = (props) => {
     const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
     const handleClose=()=>{
         props.onClose()
+    }
+    const handleView=()=>{
+        var win = window.open(item.url, '_blank');
+        win.focus();
     }
     return (
         <div>
@@ -37,22 +44,22 @@ const DialogCustom = (props) => {
                             <CardActionArea>
                                 <CardMedia
                                     className={classes.media}
-                                    image={item.url}
+                                    image={item.image}
                                     title={item.name}
                                 />
                             </CardActionArea>
                         </Card>
                 </Grid>
-                <DialogContentText>
+                <DialogContentText className={classes.description}>
                     {item.desc}
                 </DialogContentText>
               </DialogContent>
               <DialogActions>
                 <Button autoFocus onClick={handleClose} color="primary">
-                  Disagree
+                  Close
                 </Button>
-                <Button onClick={handleClose} color="primary" autoFocus>
-                  Agree
+                <Button onClick={handleView} color="primary" autoFocus>
+                  View
                 </Button>
               </DialogActions>
             </Dialog>  

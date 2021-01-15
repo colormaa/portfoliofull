@@ -29,12 +29,14 @@ const useStyles =makeStyles(theme=>({
 }))
 const projectsList = [
     {
-        url:"https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        url:"https://warm-citadel-27486.herokuapp.com/",
+        image:"https://i.ibb.co/VLp1pv2/pro1-0.png",
         name:"Project 1",
-        tag:["web", "mobile"],
-        technologies:["react", "reactnative", "nodejs", "css"],
-        desc:"Really good harmony of technologies"
+        tag:["web", "react", "redux"],
+        technologies:["react", "redux", "scss"],
+        desc:"Online shopping demo site  developed in Reactjs. Allow users to select  search, login, register, order, add product in card and payments are  in test environment. Stripejs was used in checkout section."
     },
+    /*
     {
         url:"https://images.unsplash.com/photo-1591076161532-50239c0fc14c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
         name:"project2",
@@ -91,6 +93,7 @@ const projectsList = [
         technologies:["react", "reactnative", "nodejs", "css"],
         desc:"Are you gonna have them both?"
     }
+    */
 ]
 
 const Gallery = (props)=>{

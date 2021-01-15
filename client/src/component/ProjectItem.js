@@ -12,15 +12,18 @@ const useStyles = makeStyles(theme=>({
 const ProjectItem = (props) => {
     const {project} = props;
     const classes = useStyles()
+    console.log("project ", project)
     return (
         <div onClick={props.onClick}>
         <Card className={classes.container}>
             <CardActionArea>
                 <CardMedia
                     className={classes.media}
-                    image={project.url}
+                    image={project.image}
                     title={project.name}
-                />
+                >
+                    
+                </CardMedia>
             </CardActionArea>
         </Card>
         </div>
